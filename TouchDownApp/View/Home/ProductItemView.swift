@@ -32,7 +32,7 @@ struct ProductItemView: View {
                 .fontWeight(.black)
             Text(product.formattedPrice)
                 .fontWeight(.semibold)
-                .foregroundColor(.gray)
+                .foregroundColor(.black)
             
             
             //Price

@@ -24,7 +24,7 @@ struct SectionView: View {
             
             Spacer()
         } // VStack
-        .background(colorGray.cornerRadius(12))
+        .background(Color.black.cornerRadius(12))
         .frame(width: 85)
     }
 }

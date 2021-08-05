@@ -20,11 +20,11 @@ struct CategoryItemView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 30, height: 30, alignment: .center)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.black)
                 
                 Text(category.name.uppercased())
                     .fontWeight(.light)
-                    .foregroundColor(.gray)
+                    .foregroundColor(Color.black)
                 
                 Spacer()
             } // HStack
