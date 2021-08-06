@@ -16,6 +16,7 @@ struct QuantifyFavoriteDetailView: View {
     
     var body: some View {
         HStack(alignment: .center, spacing: 6, content: {
+            Group {
             Button(action: {
                 feedback.impactOccurred()
                 if counter > 0 {
@@ -24,9 +25,14 @@ struct QuantifyFavoriteDetailView: View {
             }, label: {
                 Image(systemName: "minus.circle")
             })
+            .accessibilityAddTraits(.isButton)
+            .accessibilitySortPriority(2)
+            .accessibility(label: Text("Minus"))
             Text("\(counter)")
                 .fontWeight(.semibold)
                 .frame(minWidth: 36)
+                .accessibility(label: Text("Cart Containts \(counter) helmets"))
+                .accessibilitySortPriority(0)
             Button(action: {
                 feedback.impactOccurred()
                 if counter < 100 {
@@ -35,6 +41,9 @@ struct QuantifyFavoriteDetailView: View {
             }, label: {
                 Image(systemName: "plus.circle")
             })
+            .accessibilitySortPriority(1)
+            .accessibilityAddTraits(.isButton)
+            .accessibility(label: Text("Plus"))
             Spacer()
             
             Button(action: {
@@ -43,6 +52,8 @@ struct QuantifyFavoriteDetailView: View {
                 Image(systemName: "heart.circle")
                     .foregroundColor(.pink)
             })
+            }
+//            .accessibilityElement(children: .contain)
         }) // HStack
         .font(.system(.title, design: .rounded))
         .foregroundColor(.black)

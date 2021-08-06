@@ -20,6 +20,7 @@ struct BrandItemView: View {
             .padding(3)
             .background(Color.white.cornerRadius(12))
             .background(RoundedRectangle(cornerRadius: 12).stroke(Color.gray, lineWidth: 1))
+           
     }
 }
 

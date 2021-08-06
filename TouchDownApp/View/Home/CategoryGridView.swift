@@ -19,10 +19,13 @@ struct CategoryGridView: View {
             LazyHGrid(rows: gridLayout,alignment: .center, spacing: columnSpacing, pinnedViews: [], content: {
                 Section(
                     header: SectionView(rotateClockwise: false),
-                    footer: SectionView(rotateClockwise: true)                ) {
+                    footer: SectionView(rotateClockwise: true)
+                        .accessibility(hidden: true)                ) {
                     ForEach(categories) { category in
                         CategoryItemView(category: category)
                     }
+                    .accessibilityAddTraits(.isHeader)
+                    .accessibilityElement(children: .contain)
                 }
                 }) // Grid
             .frame(height: 140)

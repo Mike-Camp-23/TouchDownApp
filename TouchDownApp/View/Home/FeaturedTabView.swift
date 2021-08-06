@@ -17,6 +17,8 @@ struct FeaturedTabView: View {
             }
         } // Tab
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+        .accessibilityElement(children: .contain)
+        .accessibilityAddTraits(.isHeader)
     }
 }
 

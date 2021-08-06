@@ -39,7 +39,9 @@ struct ProductItemView: View {
             
             
         })
+        .accessibilityLabel("\(product.name), price: \(product.formattedPrice)")
     }
+    
 }
 
 struct ProductItemView_Previews: PreviewProvider {

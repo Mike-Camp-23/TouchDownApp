@@ -21,6 +21,7 @@ struct CategoryItemView: View {
                     .scaledToFit()
                     .frame(width: 30, height: 30, alignment: .center)
                     .foregroundColor(.black)
+                    .accessibility(hidden: true)
                 
                 Text(category.name.uppercased())
                     .fontWeight(.light)

@@ -49,6 +49,7 @@ struct ContentView: View {
                         
                         TitleVIew(title: "Brands".uppercased())
                         BrandGridView()
+                            .accessibility(hidden: true)
                         
                         FooterView()
                             .padding(.horizontal)

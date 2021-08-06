@@ -20,6 +20,8 @@ struct NavigatinBarView: View {
                     Image(systemName: "magnifyingglass")
                         .font(.title)
                         .foregroundColor(.black)
+                        .accessibility(label: Text("Search"))
+                        
                     
                    
               
@@ -51,6 +53,8 @@ struct NavigatinBarView: View {
                     
                 } // ZStack
             })
+            .accessibilityElement(children: .ignore)
+            .accessibility(label: Text("View Cart"))
         } // HStack
     }
 }

@@ -17,6 +17,7 @@ struct FeaturedItemView: View {
             .resizable()
             .scaledToFit()
             .cornerRadius(12)
+            .accessibilityLabel("Player Image #\(player.id)")
     }
 }
 
